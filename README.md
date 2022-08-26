@@ -53,7 +53,7 @@ Here's is the demonstration to download the project in the Home directory.
 cd
 git clone https://github.com/RimChy/API-Project-Ecommerce-.git 
 ```
-This is to download <a href="https://github.com/RimChy/API-Project-Ecommerce-">this project</a>. Now open the _project folder_ and go to _'server'_ directory. Then install the following dependencies to run the project.
+Now, <a href="https://github.com/RimChy/API-Project-Ecommerce-">this repository</a> will be downloaded. Open the _project folder_ and go to _'server'_ directory. Then install the following dependencies to finally run the project.
 ```
 cd server
 npm install
