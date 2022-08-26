@@ -46,6 +46,25 @@ You can follow <a href="https://www.cherryservers.com/blog/how-to-install-and-st
 sudo systemctl start mongod
 ```
 
+## Downloading the project
+
+Here's is the demostration to download the project in the Home directory. 
+```
+cd
+git clone https://github.com/RimChy/API-Project-Ecommerce-.git 
+```
+This is download <a href="https://github.com/RimChy/API-Project-Ecommerce-">this project</a> from GitHub. Now open the project folder and go to 'server' directory. Then install the following dependencies to run the project.
+```
+cd server
+npm install
+npm i express ejs hbs body-parser bcryptjs jsonwebtoken alert multer mongoose fs promt uuid path dotenv morgan cors express-session express-fileupload --save
+```
+Inside "server" directory we will find app.js. Run app.js using node or <a href="https://www.npmjs.com/package/nodemon">nodemon</a>
+```
+node app.js
+```
+## Run the project
+Now visit http://localhost:7000/ and we are online. (Use https if you face any trouble).
 
 
 
