@@ -79,6 +79,17 @@ To get the full experience, we will add some products from **admin side** to com
 * **Log out** from admin side.
 * Finally visit: http://localhost:7000/ to see the products. 
 
+### Optional
+
+Hope the first time installation was successful.
+
+Now every time we need to run the project, we just have to run the following commands.
+```
+cd API-Project-Ecommerce-/server
+nodemon app.js
+```
+Now hit the URL: http://localhost:7000/ and we are online! 
+
 ### Some screenshot are given below:
 
 
