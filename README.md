@@ -1,13 +1,13 @@
 # API Project (Ecommerce)
 
 ## Objectives
-To develop API-based websites to simulate the functionalities of e-commerce
+To develop **API-based** websites to simulate the functionalities of e-commerce
 services among different organisations.
 ## Description
 In this project, we simulate the e-commerce functionalities among different
-organisations. We consider three different organisations: an e-commerce
-organisation, a backend product supplier which supplies required products
-to the e-commerce organisation and a Bank to facilitate transactions between different
+organisations. We consider **three** different organisations: _an e-commerce
+organisation_, _a backend product supplier_ which supplies required products
+to the e-commerce organisation and _a Bank_ to facilitate transactions between different
 entities within this eco-system.
 
 ## Contributors: 
@@ -48,12 +48,12 @@ sudo systemctl start mongod
 
 ## Downloading the project
 
-Here's is the demostration to download the project in the Home directory. 
+Here's is the demonstration to download the project in the Home directory. 
 ```
 cd
 git clone https://github.com/RimChy/API-Project-Ecommerce-.git 
 ```
-This is download <a href="https://github.com/RimChy/API-Project-Ecommerce-">this project</a> from GitHub. Now open the project folder and go to 'server' directory. Then install the following dependencies to run the project.
+This is download <a href="https://github.com/RimChy/API-Project-Ecommerce-">this project</a> from GitHub. Now open the _project folder_ and go to _'server'_ directory. Then install the following dependencies to run the project.
 ```
 cd server
 npm install
@@ -66,6 +66,20 @@ node app.js
 ## Run the project
 Now visit http://localhost:7000/ and we are online. (Use https if you face any trouble).
 
+
+## How to make the best out of this website
+
+To get the full experience, we will add some products from **admin side** to complete the demonstration. 
+### Admin Side
+* Visit http://localhost:7000/admin-sign
+* Username: admin@gmail.com
+* Password: 123admin@
+* Go to **Categories** tab to add a category.
+* Then, go to **Products** tab to add a product, along with description and images of the product. 
+* **Log out** from admin side.
+* Finally visit: http://localhost:7000/ to see the products. 
+
+### Some screenshot are given below:
 
 
 
