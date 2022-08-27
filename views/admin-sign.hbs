@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <title></title>
+    <style>
+       
+    </style>
+</head>
+
+<body>
+     <section class="fixed-top">
+    <section id="nav-bar" class="" style="background-color:rgb(128, 115, 115);">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg">
+                <a class="navbar-brand text-white" href="/">DECORZ</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto">
+
+
+
+
+                        {{#if firstName}}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-toggle="dropdown" aria-expanded="false">
+
+                                {{firstName}}
+
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Profile</a>
+                                <a class="dropdown-item" href="l/ogout">Logout</a>
+
+                            </div>
+
+                        </li>
+                        {{else}}
+
+                        <li class="nav-item active">
+                            <a class="nav-link text-white " href="/signin" style="">Login/Register</a>
+                        </li>
+                        {{/if}}
+
+                        <li class="nav-item">
+                            <a class="nav-link text-warning nav-cart" href="#"><i class="fa-solid fa-cart-shopping text-red"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        </section>
+  
+
+     
+        </section>
+
+       
+
+
+        <div class="" style="background-color: blanchedalmond;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <img src="/images/back4.png" class="img-fluid rounded-circle" style="width: 100%;">
+                    </div>
+                    <div class="col-6 " style="margin:120px 0;">
+                        <div class="card w-75 mx-auto p-5 " style="background-color: rgb(230, 216, 161);">
+                            <div class="card-body">
+                                <h4 class="text-center">Admin Login</h4>
+
+                                <hr id="" / style="border-color: red;" class="w-50 mx-auto">
+                                <form action="/admin-signin" method="POST">
+                                    {{#if error}}
+                                    <section class="errors">
+                                        <ul>
+                                            <li style="list-style:none">
+                                                <div class="alert alert-danger alert-dismissible">
+                                                    {{error}}
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                    {{/if}}
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" name="email" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label"
+                                            name="password">Password</label>
+                                        <input type="password" class="form-control" name="password"
+                                            id="exampleInputPassword1" required>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Login</button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- End Account -->
+
+        <!-- Footer -->
+
+
+
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
+            MenuItems.style.maxHeight = "0px";
+            function menutoggle() {
+                if (MenuItems.style.maxHeight == "0px") {
+                    MenuItems.style.maxHeight = "200px";
+                } else {
+                    MenuItems.style.maxHeight = "0px";
+                };
+            };
+        </script>
+        <!-- -----Js for Toggle Form----- -->
+        <script>
+            var LoginForm = document.getElementById("LoginForm");
+            var RegForm = document.getElementById("RegForm");
+            var Indicator = document.getElementById("Indicator");
+            function register() {
+                RegForm.style.transform = "translateX(0px)";
+                LoginForm.style.transform = "translateX(0px)";
+                Indicator.style.transform = "translateX(100px)";
+            }
+            function login() {
+                RegForm.style.transform = "translateX(300px)";
+                LoginForm.style.transform = "translateX(300px)";
+                Indicator.style.transform = "translateX(0px)";
+            }
+        </script>
+        <!-- Js for toggle menu -->
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/all.min.js"></script>
+</body>
+
+</html>
