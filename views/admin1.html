@@ -1,0 +1,267 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        /* ==========================Font========================== */
+
+        @font-face {
+            font-family: 'robotoregular';
+            src: url(../fonts/roboto-regular-webfont.woff) format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", "robotoregular", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: wheat;
+        }
+
+        nav {
+            position: fixed;
+            width: 60px;
+            height: 100%;
+            background: var(--bg-secondary);
+            transition: .5s;
+            overflow: hidden;
+        }
+
+        nav.active {
+            width: 15%
+        }
+
+        /* nav:hover {
+    width: 300px;
+} */
+
+        nav ul {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        nav ul li {
+            list-style: none;
+            width: 100%;
+            position: relative;
+
+        }
+
+        nav ul li a:hover {
+            color: var(--bg-primary);
+        }
+
+        nav ul li:hover a::before {
+            background-color: var(--bg-active);
+            width: 100%;
+        }
+
+        nav ul li a {
+            position: relative;
+            display: block;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--cl-text);
+            transition: .2s;
+        }
+
+        nav ul li a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            transition: .2s;
+        }
+
+        nav ul li a .icon {
+            position: relative;
+            display: block;
+            min-width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            vertical-align: middle;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul li a .title {
+            position: relative;
+            font-size: .85em;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul li a .icon * {
+            font-size: 1.1em;
+        }
+
+        nav ul li a.toggle {
+            border-bottom: 3px solid var(--bg-primary);
+        }
+
+        .toggle {
+            cursor: pointer;
+        }
+
+        header {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                height: 60px;
+                background: var(--bg-secondary);
+                color: var(--cl-text);
+            }
+
+            header a {
+                color: var(--cl-text)
+            }
+
+            nav {
+                left: -60px;
+            }
+
+            nav.active {
+                left: 0;
+                width: 25%;
+            }
+
+            nav ul li a.toggle {
+                display: none;
+            }
+        }
+
+        :root {
+            --bg-primary: #41444b;
+            --bg-secondary: #52575d;
+            --bg-active: #fddb3a;
+            --cl-text: #f6f4e6;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <h3>Dashboard</h3>
+        <a href="#">
+            <i class="fas fa-sign-out-alt"></i>
+        </a>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a class="toggle">
+                    <span class="icon"><i class="fas fa-bars"></i></span>
+                    <span class="title">Menu</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon" title="Dashborad"><i class="fas fa-home"></i></span>
+                    <span class="title">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon" title="Products"><i class="fa-solid fa-bag-shopping"></i></span>
+                    <span class="title">Products</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon" title="Categories"><i class="fas fa-envelope"></i></span>
+                    <span class="title">Categories</span>
+                </a>
+
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon" title="Logout"><i class="fas fa-sign-out-alt"></i></span>
+                    <span class="title">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script>
+        var getSidebar = document.querySelector('nav');
+        var getToggle = document.getElementsByClassName('toggle');
+        for (var i = 0; i <= getToggle.length; i++) {
+            getToggle[i].addEventListener('click', function () {
+                getSidebar.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+
+</html>
