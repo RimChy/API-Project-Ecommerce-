@@ -63,6 +63,8 @@ Inside "server" directory we will find app.js. Run app.js using node or <a href=
 ```
 node app.js
 ```
+Make sure your database is connected. If not run: ```sudo systemctl start mongod```
+
 ## Run the project
 Now visit http://localhost:7000/ and we are online. (Use https if you face any trouble).
 
