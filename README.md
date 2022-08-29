@@ -92,7 +92,7 @@ nodemon app.js
 ```
 Now hit the URL: http://localhost:7000/ and we are online! 
 
-### Some screenshot are given below:
+
 
 
 
