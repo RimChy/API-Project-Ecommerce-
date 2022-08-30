@@ -82,6 +82,9 @@ To get the full experience, we will add some products from **admin side** to com
 * **Log out** from admin side.
 * Finally visit: http://localhost:7000/ to see the products. 
 
+### Supplier Side
+* Visit http://localhost:7000/supplier to view the supplier page, including supplier's balance and dashboard.
+
 ### Optional
 
 Hope the first time installation was successful.
