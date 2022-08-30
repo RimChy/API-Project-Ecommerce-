@@ -41,10 +41,11 @@ sudo apt install -y git curl
 ```
 
 ### Installing MongoDB
-You can follow <a href="https://www.cherryservers.com/blog/how-to-install-and-start-using-mongodb-on-ubuntu-20-04">this tutorial to install MongoDB</a> in your system. After installing, execute the command to start the MongoDB service:
+You can follow <a href="https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/">MongoDB Official documentation to install MongoDB</a> in your system. After installing, execute the command to start the MongoDB service:
 ```
 sudo systemctl start mongod
 ```
+or, ```sudo systemctl start mongod``` if you installed MongoDB from the system repo. (This installation from Ubuntu system repo is NOT recommended by official Mongo docs, it's quite outdated for now. Reference: https://stackoverflow.com/questions/48092353/failed-to-start-mongod-service-unit-mongod-service-not-found#comment121861244_48092470)
 
 ## Downloading the project
 
@@ -63,7 +64,7 @@ Inside "server" directory we will find app.js. Run app.js using node or <a href=
 ```
 node app.js
 ```
-
+Note: If you face any error, make sure your node version >= 14.15.0 ,
 
 ## Run the project
 Now visit http://localhost:7000/ and we are online. (Use https if you face any trouble).
