@@ -45,7 +45,7 @@ You can follow <a href="https://www.mongodb.com/docs/manual/tutorial/install-mon
 ```
 sudo systemctl start mongod
 ```
-or, ```sudo systemctl start mongod``` if you installed MongoDB from the system repo. (This installation from Ubuntu system repo is NOT recommended by official Mongo docs, it's quite outdated for now. Reference: https://stackoverflow.com/questions/48092353/failed-to-start-mongod-service-unit-mongod-service-not-found#comment121861244_48092470)
+or, ```sudo systemctl start mongodb``` if you installed MongoDB from the system repo. (This installation from Ubuntu system repo is NOT recommended by official Mongo docs, it's quite outdated for now. Reference: https://stackoverflow.com/questions/48092353/failed-to-start-mongod-service-unit-mongod-service-not-found#comment121861244_48092470)
 
 ## Downloading the project
 
